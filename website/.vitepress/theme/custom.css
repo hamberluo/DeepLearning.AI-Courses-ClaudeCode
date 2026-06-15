@@ -28,3 +28,14 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #d97757, #e0a06b);
 }
+
+/* 首页 hero 标语：宽屏放开宽度、保持单行 */
+@media (min-width: 960px) {
+  .VPHero .main {
+    max-width: 100%;
+  }
+  .VPHero .tagline {
+    max-width: none;
+    white-space: nowrap;
+  }
+}
