@@ -39,6 +39,8 @@ SLUGS = [
 
 # 朗读读法修正（只影响语音，不改正文）。长词在前，避免子串误伤。
 TERM_READ = [
+    # 多音字：命令行的「行」应读 háng（银行的行），用同音字「航」纠正
+    ("命令行", "命令航"),
     ("CLAUDE.local.md", "Claude 本地配置文件"),
     ("CLAUDE.md", "Claude 配置文件"),
     ("settings.local.json", "本地设置文件"),
