@@ -33,6 +33,66 @@ const scenes = {
     { kind: 'tool', tool: 'Bash', arg: 'open index.html', confirm: true, out: '已在默认浏览器打开' },
     { kind: 'result', text: '可视化已经跑起来了 ✨ 你可以点按钮开关动画、加更多粒子，或者清空重来。' },
   ],
+
+  // 03 节：和代码库对话，追踪一次请求
+  codebase: [
+    { kind: 'user', text: '给我一个这个代码库的总览，再追踪一次用户查询从前端到后端的完整流程。' },
+    { kind: 'thinking', text: '不逐个翻文件，用 agentic search 自主定位出最相关的几个文件。' },
+    { kind: 'tool', tool: 'Search', arg: '入口文件 / API 端点 / RAG 相关', out: '命中 app.py、rag_system.py、search_tools.py …' },
+    { kind: 'tool', tool: 'Read', arg: 'frontend/script.js', out: '前端用 fetch 调 /api/query' },
+    { kind: 'tool', tool: 'Read', arg: 'rag_system.py', out: 'RAG：向量检索 → 拼上下文 → 调模型' },
+    { kind: 'result', text: '流程是：前端发请求 → API 端点 → RAG 系统在 Chroma 向量库检索 → 带上下文调用大模型 → 把回答发回前端。要我画成图吗？' },
+  ],
+
+  // 05 节：用 Playwright 让 Claude 自己截图、自改、自验证
+  playwright: [
+    { kind: 'user', text: '让「新建对话」按钮和下面的链接一样：左对齐、去掉边框。' },
+    { kind: 'tool', tool: 'Playwright', arg: '打开浏览器，导航到 localhost:8000', confirm: true, out: '新标签页已打开' },
+    { kind: 'tool', tool: 'Playwright', arg: '对当前页面截图', out: '已拿到截图' },
+    { kind: 'thinking', text: '看出问题了：按钮有边框和背景色，而且居中，没和下面的链接对齐。' },
+    { kind: 'tool', tool: 'Edit', arg: 'frontend/style.css', out: '去掉 border/background，改成左对齐' },
+    { kind: 'tool', tool: 'Playwright', arg: '再次截图验证', out: '已拿到截图' },
+    { kind: 'result', text: '改完并自查通过：按钮现在左对齐、无边框，和其他链接风格一致。整个截图—分析—修改—再截图的循环，全程我自己跑完，不用你手动截图。' },
+  ],
+
+  // 06 节：先写测试，再调试，揪出 MAX_RESULTS=0
+  debug: [
+    { kind: 'user', text: '应用查询时报错了。先给 AIGenerator、rag_system、search_tools 写测试，跑测试定位问题——别急着猜。多想想。' },
+    { kind: 'thinking', text: '像是配置问题，错误可能在某处被吞掉了。先用 pytest 搭测试，把 ChromaDB 打桩。' },
+    { kind: 'todo', items: ['用 pytest 建测试目录', 'mock 掉 ChromaDB 依赖', '跑单元测试 + 集成测试'] },
+    { kind: 'tool', tool: 'Write', arg: 'tests/test_search_tools.py', out: '含 fixture 与 mock' },
+    { kind: 'tool', tool: 'Bash', arg: 'uv run pytest', confirm: true, out: '部分用例失败，指向向量搜索返回 0 条' },
+    { kind: 'tool', tool: 'Read', arg: 'config.py', out: '发现 MAX_RESULTS = 0 ！' },
+    { kind: 'tool', tool: 'Edit', arg: 'config.py', out: 'MAX_RESULTS = 0 → 5' },
+    { kind: 'tool', tool: 'Bash', arg: 'uv run pytest', out: '全部通过 ✓' },
+    { kind: 'result', text: '真凶是 MAX_RESULTS 被设成了 0，向量检索一条都不返回。已修复，并留下一套能持续跑的测试基础设施——以后再坏，立刻就知道为什么。' },
+  ],
+
+  // 09 节：重构 notebook，拆分关注点
+  notebook: [
+    { kind: 'user', text: '重构这个 notebook：拆出「加载数据」「计算指标」两个 Python 模块，改进可视化，并写个 README 说明怎么用。' },
+    { kind: 'tool', tool: 'Notebook', arg: '读取 analysis.ipynb 的各单元格', out: '已分析结构与数据流' },
+    { kind: 'tool', tool: 'Write', arg: 'data_loader.py', out: '负责读取与清洗 CSV' },
+    { kind: 'tool', tool: 'Write', arg: 'metrics.py', out: '负责计算营收、平均订单价值等业务指标' },
+    { kind: 'tool', tool: 'Notebook', arg: '重写 analysis.ipynb', out: '改用模块，业务逻辑与展示分离' },
+    { kind: 'result', text: '重构完成：notebook 现在只管「展示」，脏活交给两个模块；可视化更清爽，还配了 README。下一步可以一键变成 Streamlit 仪表盘。' },
+  ],
+
+  // 10 节：Figma 稿 → Next.js 应用 → 接真实数据
+  figma: [
+    { kind: 'user', text: '用这张 Figma 设计稿构建 Next.js 仪表盘，图表用 recharts，再用 Playwright 看看效果。' },
+    { kind: 'tool', tool: 'Figma', arg: 'Get Image · 取设计稿预览', confirm: true, out: '已拿到设计稿截图' },
+    { kind: 'tool', tool: 'Figma', arg: 'Get Code · 取设计稿背后的代码', out: '已拿到布局与样式信息' },
+    { kind: 'tool', tool: 'Bash', arg: 'npm install recharts', out: '依赖已安装' },
+    { kind: 'tool', tool: 'Write', arg: 'app/dashboard/page.tsx', out: '按组件化结构搭出仪表盘' },
+    { kind: 'tool', tool: 'Playwright', arg: '导航到 localhost:3000 并截图', out: '与设计稿高度吻合' },
+    { kind: 'result', text: '设计稿已变成可运行的 Next.js 页面。' },
+    { kind: 'user', text: '再用美联储经济数据（FRED）的真实数据填充这些图表。' },
+    { kind: 'tool', tool: 'Web', arg: '搜索 FRED API 文档与用法', out: '了解如何取 CPI / 失业率 / 国债收益率' },
+    { kind: 'result', text: '取真实数据需要一个 API key，请你去 FRED 账号申请一个填进来。' },
+    { kind: 'tool', tool: 'Write', arg: 'lib/fred.ts', out: '取数服务 + 代理请求' },
+    { kind: 'result', text: '搞定 ✨ 图表里现在是真实的失业率、十年期国债收益率等数据——从「带假数据的设计稿」到「接入真实数据源」，只用了几分钟。' },
+  ],
 }
 
 const steps = computed(() => scenes[props.scene] ?? [])
@@ -78,6 +138,9 @@ const toolColors = {
   Bash: '#a78bfa',
   Search: '#f472b6',
   Web: '#2dd4bf',
+  Playwright: '#2dd4bf',
+  Figma: '#f472b6',
+  Notebook: '#fb923c',
 }
 function toolColor(t) {
   return toolColors[t] ?? 'var(--vp-c-brand-1)'

@@ -11,8 +11,6 @@ export default defineConfig({
   cleanUrls: true,
   appearance: 'dark',
   lastUpdated: true,
-  // 原型阶段 03–11 尚未建页，暂时忽略死链；全部铺开后移除。
-  ignoreDeadLinks: true,
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
