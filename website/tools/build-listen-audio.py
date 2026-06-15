@@ -60,6 +60,7 @@ TERM_READ = [
     ("2024", "二零二四"),
     ("2025", "二零二五"),
     ("2026", "二零二六"),
+    ("v2.0.70", "2.0.70 版本"),
     ("CLAUDE.local.md", "Claude 本地配置文件"),
     ("CLAUDE.md", "Claude 配置文件"),
     ("settings.local.json", "本地设置文件"),
@@ -137,7 +138,25 @@ def clean(md):
     text = re.sub(r"\n{3,}", "\n\n", text)
     for en, zh in TERM_READ:
         text = text.replace(en, zh)
+    text = normalize_symbols(text)
     return text.strip()
+
+
+def normalize_symbols(text):
+    """把朗读会读错的符号换成自然停顿或读法。斜杠命令（/init 等）保留不动。"""
+    text = re.sub(r"—+", "，", text)                    # 破折号 → 停顿（别读成「破折号」）
+    text = re.sub(r"\s*→\s*", "，", text)               # 流程箭头 → 停顿
+    text = re.sub(r"\s+/\s+", "、", text)               # 带空格的斜杠分隔（项目级 / 本地级）
+    text = re.sub(r"(?<=[\u4e00-\u9fa5])/(?=[\u4e00-\u9fa5])", "、", text)  # 中文间斜杠（深色/浅色）
+    text = re.sub(r"@(?![A-Za-z])", " at 符号 ", text)   # @ 引用（命令里的 @latest 等保留）
+    text = re.sub(r"\s#\s", " 井号 ", text)              # 独立的 #（# 内容）
+    text = text.replace("×2", " 两次").replace("×", " 乘 ")
+    text = text.replace("+", " 加 ")                    # Shift+Tab、A + B
+    text = text.replace("\\", "")                       # 残留反斜杠（后文已有「反斜杠」说明）
+    text = text.replace("_", " ")                       # 下划线读成空格（ui_feature 等）
+    text = re.sub(r"，{2,}", "，", text)                 # 合并重复停顿
+    text = re.sub(r"[ \t]{2,}", " ", text)
+    return text
 
 
 async def synth(slug):
