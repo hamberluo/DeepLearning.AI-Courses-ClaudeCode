@@ -1,7 +1,7 @@
 # DeepLearning.AI《Claude Code》课程中文化项目 — 设计文档
 
 - 日期：2026-06-15
-- 状态：阶段① 设计已确认，待开工
+- 状态：阶段① 已完成；阶段② 设计已确认，原型开工中
 
 ## 0. 项目目标
 
@@ -140,15 +140,48 @@ duration: "04:26"
 
 → 直接作为阶段②网站的内容源。
 
-## 5. 后续阶段轮廓（细节待该阶段再定）
+## 5. 阶段② 详细设计（GitHub Pages 网站）
 
-### 阶段② GitHub Pages 网站
+### 5.1 决策与理由
 
-- 静态站，展示「文字 + 代码动画」。
-- 内容源 = 阶段① 的 `content/*.md` + front matter。
+- **技术栈：VitePress（Vue 驱动的静态站生成器）。** 内容密集型「文档 + 可交互演示」站的业界最佳实践（Vite/Vue 官方文档自用）；markdown 里可直接内嵌 Vue 组件做动画；深色主题/本地搜索/导航开箱即用。参考实现：作者本人的「GBA 内核精讲」站（`gba/libretro-mgba/website`），同款套路已验证可行。
+- **动画形态：以读者接受度为最高准则。** 本课讲的是「怎么用一个终端 AI 工具」，读者最想看的是**亲眼看到 Claude Code 一步步干活**，而非抽象概念图。因此：
+  1. **`<ClaudeReplay>` 会话回放（贯穿全站的主力组件）**：仿真终端，点「下一步」逐步播放真实会话——用户提示词 → Claude 思考 → 调用工具（Read/Edit/Bash 徽标）→ 改文件 → 出结果。像看录屏一样看懂 agent 运转。
+  2. **每节 1 个招牌概念动画**（仅在回放讲不清时上）：如 02 的 agent 循环、04 的计划模式、07 的 worktree 并行、08 的 hooks 生命周期。
+- **精度**：对齐 GBA 站（每节一个招牌 + 干净代码块），不过度炫技。
+
+### 5.2 内容与单一事实源
+
+- `content/*.md`（阶段① 产出）= **干净译文存档**，同时供阶段③（manim 讲稿）复用。
+- `website/guide/*.md` = **发布层**：在译文基础上就地内嵌动画组件（沿用 GBA 站「文章+组件同页」模式，便于把动画精准插在讲到该概念处）。
 - 代码素材源 = 官方仓库 `https-deeplearning-ai/sc-claude-code-files`（见 §3.3）。
-- 代码动画形态待定（打字机 / 滚动叙事 scrollytelling / diff 高亮）。
-- 技术栈待定。
+
+### 5.3 目录结构
+
+```
+website/
+├── package.json                 # vitepress + vue
+├── index.md                     # 首页（11 节课程地图）
+├── guide/                       # 11 篇正文（内嵌组件）
+│   ├── 01-introduction.md
+│   └── ...
+├── components/                  # Vue 交互组件
+│   ├── ClaudeReplay.vue         # 主力：会话回放
+│   ├── AgentLoopDemo.vue        # 02 agent 循环
+│   └── ...
+└── .vitepress/
+    ├── config.ts                # 站点配置（zh-CN/深色/本地搜索/侧边栏）
+    └── theme/index.ts           # 全局注册组件
+```
+
+### 5.4 部署
+
+- GitHub Actions：push 到默认分支且改动 `website/**` 时自动构建并发布到 GitHub Pages。
+- `base` 默认设为 `/DeepLearning.AI-Courses-ClaudeCode/`（项目站点路径）；若后续接自定义域名再改回 `/`。
+
+### 5.5 推进节奏
+
+先搭脚手架 + 做 1～2 节原型（01 介绍 + 02 什么是 Claude Code）定调，认可后批量铺开其余 9 节。
 
 ### 阶段③ manim 动画课
 
