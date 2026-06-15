@@ -14,7 +14,7 @@ const started = ref(false)
 const playing = ref(false)
 const cur = ref(0)
 const dur = ref(0)
-const rates = [1.5, 1.75, 2, 1, 1.25]
+const rates = [1, 1.25, 1.5, 0.75]
 const rateIdx = ref(0)
 const rate = computed(() => rates[rateIdx.value])
 

@@ -13,6 +13,16 @@
   --vp-c-brand-soft: rgba(217, 119, 87, 0.18);
 }
 
+/* 术语表：前三列（英文 / 中文 / 策略）不换行，仅「说明」列可换行 */
+.glossary-table td:nth-child(1),
+.glossary-table th:nth-child(1),
+.glossary-table td:nth-child(2),
+.glossary-table th:nth-child(2),
+.glossary-table td:nth-child(3),
+.glossary-table th:nth-child(3) {
+  white-space: nowrap;
+}
+
 /* 首页大标题渐变 */
 :root {
   --vp-home-hero-name-color: transparent;
