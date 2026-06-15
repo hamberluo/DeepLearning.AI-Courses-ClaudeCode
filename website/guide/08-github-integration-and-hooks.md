@@ -8,6 +8,8 @@ title: 探索 GitHub 集成与 hooks
 讲师 Elie Schoppik（Anthropic）· 时长 12:46 · [▶ 原视频](https://www.youtube.com/watch?v=icM60GWLpME)
 :::
 
+<AudioPlayer src="audio/08-github-integration-and-hooks.mp3" />
+
 这一节，你会学到怎么在**终端之外**、通过 **GitHub 集成**来用 Claude Code：怎么配置它来**评审拉取请求（pull request）、修复 issue**。然后你会学到怎么用 **Claude Code 的钩子（hooks）**，在使用工具的前后执行代码。
 
 ## 收尾：删掉工作树并推到 GitHub

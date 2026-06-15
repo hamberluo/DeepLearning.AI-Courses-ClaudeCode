@@ -8,6 +8,8 @@ title: 环境搭建与代码库理解
 讲师 Elie Schoppik（Anthropic）· 时长 14:00 · [▶ 原视频](https://www.youtube.com/watch?v=GMcGddfI8ls)
 :::
 
+<AudioPlayer src="audio/03-setup-and-codebase-understanding.mp3" />
+
 我们要做的第一个例子，是一个端到端的 RAG 聊天机器人。先用 Claude Code 来摸清这个代码库。
 
 在让 Claude Code 帮我们狂写代码之前，先聊聊怎么用这个工具，**快速搞懂一个更大的代码库**。

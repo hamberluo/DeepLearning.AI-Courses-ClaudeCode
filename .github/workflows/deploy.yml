@@ -28,6 +28,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate narration audio (edge-tts)
+        run: |
+          pip install -r tools/requirements.txt
+          python tools/build-listen-audio.py
       - run: npm ci
       - run: npm run docs:build
       - uses: actions/configure-pages@v4

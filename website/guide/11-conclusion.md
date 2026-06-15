@@ -8,6 +8,8 @@ title: 结语
 讲师 Elie Schoppik（Anthropic）· 时长 00:37 · [▶ 原视频](https://www.youtube.com/watch?v=WKr4f7tfyPU)
 :::
 
+<AudioPlayer src="audio/11-conclusion.mp3" />
+
 恭喜你走到这里！
 
 你已经学会了怎么用 Claude Code 去**探索、测试、重构和调试**代码库。

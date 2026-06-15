@@ -8,6 +8,8 @@ title: 同时并行开发多个功能
 讲师 Elie Schoppik（Anthropic）· 时长 11:52 · [▶ 原视频](https://www.youtube.com/watch?v=tn9W_WT779g)
 :::
 
+<AudioPlayer src="audio/07-adding-multiple-features.mp3" />
+
 你可以开**多个** Claude Code 会话，并行地做很多功能。为了管好这些会话、避免它们改同一个文件造成覆盖，你可以用**工作树（Git worktree）**。这一节，我们就用工作树**并行**给聊天机器人加三个功能。
 
 ## 先做一个自定义斜杠命令

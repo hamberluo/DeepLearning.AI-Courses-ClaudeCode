@@ -6,6 +6,7 @@ import MemoryLayersDemo from '../../components/MemoryLayersDemo.vue'
 import PlanModeDemo from '../../components/PlanModeDemo.vue'
 import WorktreeDemo from '../../components/WorktreeDemo.vue'
 import HooksTimelineDemo from '../../components/HooksTimelineDemo.vue'
+import AudioPlayer from '../../components/AudioPlayer.vue'
 import './custom.css'
 
 export default {
@@ -17,5 +18,6 @@ export default {
     app.component('PlanModeDemo', PlanModeDemo)
     app.component('WorktreeDemo', WorktreeDemo)
     app.component('HooksTimelineDemo', HooksTimelineDemo)
+    app.component('AudioPlayer', AudioPlayer)
   },
 } satisfies Theme

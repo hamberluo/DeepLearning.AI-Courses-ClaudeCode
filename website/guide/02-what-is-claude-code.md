@@ -8,6 +8,8 @@ title: 什么是 Claude Code？
 讲师 Elie Schoppik（Anthropic）· 时长 08:15 · [▶ 原视频](https://www.youtube.com/watch?v=JjQBijjVnMo)
 :::
 
+<AudioPlayer src="audio/02-what-is-claude-code.mp3" />
+
 这第一节课，我们会过一遍 Claude Code 的 agent 工作流程、它用来在你代码库里穿梭的那些工具，以及它跨会话保留的记忆。我们直接开始。
 
 ## Claude Code 到底是什么

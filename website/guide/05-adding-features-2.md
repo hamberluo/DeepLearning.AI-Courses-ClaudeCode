@@ -8,6 +8,8 @@ title: 添加功能（下）
 讲师 Elie Schoppik（Anthropic）· 时长 05:29 · [▶ 原视频](https://www.youtube.com/watch?v=HbqK8aPdcB0)
 :::
 
+<AudioPlayer src="audio/05-adding-features-2.mp3" />
+
 接上一节，我们让 Claude Code 用 Playwright MCP 服务器去摸索、搭出需要的内容。
 
 ## 让 Claude 自己截图、自己改、自己验证

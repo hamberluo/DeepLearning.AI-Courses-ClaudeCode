@@ -8,6 +8,8 @@ title: 课程介绍
 讲师 Elie Schoppik（Anthropic）· 时长 04:26 · [▶ 原视频](https://www.youtube.com/watch?v=_tHVJuIbc-s)
 :::
 
+<AudioPlayer src="audio/01-introduction.mp3" />
+
 欢迎来到《Claude Code：高度自主的编程助手》这门短课。它由 DeepLearning.AI 和 Anthropic 联手打造，又一次请来了 Anthropic 的 Elie Schoppik，来跟我们分享用好 Claude Code 的最佳实践。
 
 我（吴恩达）特别期待这门课。Claude Code 是我现在最喜欢的编程助手——它把我和很多开发者的效率提升了一大截，而且是个很有深度、值得细细琢磨的工具。所以我想和 Anthropic 一起，把背后那些最重要的思路，系统、完整地讲清楚，争取做成这方面最权威的一门课。

@@ -8,6 +8,8 @@ title: 测试、调试与代码重构
 讲师 Elie Schoppik（Anthropic）· 时长 12:30 · [▶ 原视频](https://www.youtube.com/watch?v=Ifx7Lb1ehu8)
 :::
 
+<AudioPlayer src="audio/06-testing-debugging-refactoring.mp3" />
+
 现在这个代码库**缺少测试**，没法评估聊天机器人的 RAG 流程。这一节我们就来写这些测试，并用它们去**调试**一个聊天机器人处理查询时出的错；最后，再**重构**它处理工具调用的方式。开始吧。
 
 ## 出 bug 了，但别急着「截图丢给 Claude」

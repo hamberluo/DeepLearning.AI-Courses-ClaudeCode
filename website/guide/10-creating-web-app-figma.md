@@ -8,6 +8,8 @@ title: 基于 Figma 设计稿创建 Web 应用
 讲师 Elie Schoppik（Anthropic）· 时长 09:53 · [▶ 原视频](https://www.youtube.com/watch?v=nn5T9457tLU)
 :::
 
+<AudioPlayer src="audio/10-creating-web-app-figma.mp3" />
+
 这最后一节，你会把 Claude 连上 **Figma 的 MCP 服务器**，把一张设计稿导入 Claude Code，并把应用开发出来。我们来玩点有意思的。
 
 ## 这一节要做什么

@@ -12,6 +12,8 @@ title: 重构 Jupyter Notebook 并制作仪表盘
 本节在搬运的 YouTube 播放列表里缺失，文字稿取自 DeepLearning.AI 公开课程页。
 :::
 
+<AudioPlayer src="audio/09-refactoring-jupyter-notebook.mp3" />
+
 Claude Code 自带读取和编辑 Jupyter notebook 的工具。这一节，我们做第二个例子：用 Claude Code **重构一个 Jupyter notebook，并把它变成一个仪表盘**。
 
 ## 一个又乱又糙的 notebook

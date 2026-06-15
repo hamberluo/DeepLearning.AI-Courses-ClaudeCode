@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Claude Code 中文精讲
   text: 高度自主的编程助手
-  tagline: DeepLearning.AI × Anthropic 短课的中文版 · 文字 + 可交互代码动画 · 连小孩都听得懂
+  tagline: DeepLearning.AI × Anthropic 短课的中文版 · 读 + 听 + 动手 · 连小孩都听得懂
   actions:
     - theme: brand
       text: 开始学习
@@ -32,7 +32,7 @@ features:
 
 这是 DeepLearning.AI 与 Anthropic 联手打造的短课 **《Claude Code: A Highly Agentic Coding Assistant》** 的中文精讲版。讲师 Elie Schoppik（Anthropic），吴恩达开场。
 
-我们没有照搬机翻字幕，而是把全部英文人工字幕重新整理、翻译、润色成**平实好懂的中文文章**，并为每节配上**可交互的代码动画**——让你不只是「读」，而是「看到」Claude Code 一步步把活干完。
+我们没有照搬机翻字幕，而是把全部英文人工字幕重新整理、翻译、润色成**平实好懂的中文文章**，为每节配上**可交互的代码动画**，还录了**中文女声朗读**——让你能读、能听、能动手，看着 Claude Code 一步步把活干完。
 
 ## 课程地图
 

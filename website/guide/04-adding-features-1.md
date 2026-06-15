@@ -8,6 +8,8 @@ title: 添加功能（上）
 讲师 Elie Schoppik（Anthropic）· 时长 12:09 · [▶ 原视频](https://www.youtube.com/watch?v=srUCKLoe20E)
 :::
 
+<AudioPlayer src="audio/04-adding-features-1.mp3" />
+
 你已经摸清了这个聊天机器人的代码库，接下来我们就给界面加功能，并为聊天机器人实现一个新工具。
 
 ## 我们想加什么功能
