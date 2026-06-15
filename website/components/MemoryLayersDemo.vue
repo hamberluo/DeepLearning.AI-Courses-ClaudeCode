@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const layers = [
   {
@@ -35,6 +35,11 @@ const layers = [
 ]
 
 const active = ref('project')
+const current = computed(() => layers.find((l) => l.id === active.value) ?? layers[0])
+
+function select(id) {
+  active.value = id
+}
 </script>
 
 <template>
@@ -45,21 +50,21 @@ const active = ref('project')
         v-for="l in layers"
         :key="l.id"
         :class="{ on: active === l.id }"
-        @click="active = l.id"
+        @click="select(l.id)"
       >{{ l.name }}</button>
     </div>
 
-    <div v-for="l in layers" :key="l.id" v-show="active === l.id" class="panel">
+    <div :key="current.id" class="panel">
       <div class="head">
-        <code class="file">{{ l.file }}</code>
-        <span class="git" :class="{ ok: l.gitOk }">{{ l.gitOk ? '✓ 进 git · 团队共享' : '✗ 不进 git / 仅本机' }}</span>
+        <code class="file">{{ current.file }}</code>
+        <span class="git" :class="{ ok: current.gitOk }">{{ current.gitOk ? '✓ 进 git · 团队共享' : '✗ 不进 git / 仅本机' }}</span>
       </div>
       <div class="rows">
-        <div class="row"><span class="k">放在哪</span><span class="v">{{ l.where }}</span></div>
-        <div class="row"><span class="k">作用范围</span><span class="v">{{ l.git }}</span></div>
-        <div class="row"><span class="k">写法举例</span><span class="v ex">“{{ l.example }}”</span></div>
+        <div class="row"><span class="k">放在哪</span><span class="v">{{ current.where }}</span></div>
+        <div class="row"><span class="k">作用范围</span><span class="v">{{ current.git }}</span></div>
+        <div class="row"><span class="k">写法举例</span><span class="v ex">“{{ current.example }}”</span></div>
       </div>
-      <p class="tip">💡 {{ l.tip }}</p>
+      <p class="tip">💡 {{ current.tip }}</p>
     </div>
   </div>
 </template>
