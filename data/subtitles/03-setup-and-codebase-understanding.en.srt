@@ -1,0 +1,1215 @@
+1
+00:00:03,502 --> 00:00:07,206
+The first example we'll work on
+is an end-to-end RAG chatbot.
+
+2
+00:00:07,473 --> 00:00:09,842
+Let's use Claude Code to explore the code base.
+
+3
+00:00:10,376 --> 00:00:12,077
+Before we start using Claude Code
+
+4
+00:00:12,077 --> 00:00:14,079
+to write lots of code for us,
+
+5
+00:00:14,546 --> 00:00:17,082
+let's talk about how we can use this tool
+
+6
+00:00:17,082 --> 00:00:19,651
+to get up to speed on larger code bases.
+
+7
+00:00:20,319 --> 00:00:23,856
+Right here, I have an application
+where I can chat with Claude
+
+8
+00:00:24,223 --> 00:00:27,192
+about course materials from Deep Learning AI.
+
+9
+00:00:27,493 --> 00:00:30,963
+So let's try asking an outline of a course. For example, what
+
+10
+00:00:30,963 --> 00:00:35,367
+is the outline of the MCP Build Rich-Context AI Apps
+with Anthropic.
+
+11
+00:00:35,634 --> 00:00:37,202
+We'll see here that I'll get a
+
+12
+00:00:37,202 --> 00:00:38,804
+response with quite a bit of detail
+
+13
+00:00:39,204 --> 00:00:42,708
+around the lessons and descriptions for each of those lessons.
+
+14
+00:00:42,941 --> 00:00:45,778
+With that in mind, let's see how we can get
+
+15
+00:00:45,778 --> 00:00:48,914
+up to speed on the underlying code that powers this application.
+
+16
+00:00:49,515 --> 00:00:50,983
+Back in VS Code, I have
+
+17
+00:00:50,983 --> 00:00:52,718
+the terminal open here and I'm going
+
+18
+00:00:52,718 --> 00:00:54,186
+to hop into Claude Code just
+
+19
+00:00:54,186 --> 00:00:55,921
+by typing in claude and pressing enter.
+
+20
+00:00:56,455 --> 00:00:59,558
+In this application, I can start chatting with my codebase.
+
+21
+00:00:59,792 --> 00:01:02,828
+So I'm going to start with a high-level question just to
+
+22
+00:01:02,828 --> 00:01:04,863
+give me an overview of the codebase.
+
+23
+00:01:05,264 --> 00:01:08,267
+What we're going to see Claude Code do is agentically search
+
+24
+00:01:08,734 --> 00:01:12,738
+over the codebase, figure out some of the most important files
+
+25
+00:01:13,105 --> 00:01:16,241
+and give me a description of what's happening in this application.
+
+26
+00:01:16,708 --> 00:01:19,144
+Instead of searching through each individual file,
+
+27
+00:01:19,678 --> 00:01:22,581
+we're going to agentically search and find the most relevant ones.
+
+28
+00:01:22,915 --> 00:01:25,918
+So here we're going to get some information about
+
+29
+00:01:25,918 --> 00:01:28,954
+the architecture, the key components, some of the features,
+
+30
+00:01:29,221 --> 00:01:31,023
+and now if there are particular
+
+31
+00:01:31,023 --> 00:01:33,625
+things I want to dig into, I can easily do that.
+
+32
+00:01:34,059 --> 00:01:37,329
+I can also ask other higher level questions like how
+
+33
+00:01:37,429 --> 00:01:39,364
+are these documents processed?
+
+34
+00:01:39,631 --> 00:01:43,135
+In this application, we're using Retrieval Augmented Generation
+
+35
+00:01:43,335 --> 00:01:45,737
+to fetch information about these courses.
+
+36
+00:01:46,004 --> 00:01:49,007
+If I want to get more information about that process,
+
+37
+00:01:49,208 --> 00:01:50,876
+I can ask a question like this one.
+
+38
+00:01:51,310 --> 00:01:53,779
+We like to say that Claude Code is a fantastic
+
+39
+00:01:53,946 --> 00:01:55,747
+engineer alongside you,
+
+40
+00:01:55,848 --> 00:01:57,649
+but it's an even better explainer.
+
+41
+00:01:57,850 --> 00:02:00,752
+So as you're getting up to speed with new codebases,
+
+42
+00:02:00,919 --> 00:02:03,021
+new data sets. First, start using Claude Code
+
+43
+00:02:03,021 --> 00:02:05,390
+as a way to explain things to you,
+
+44
+00:02:05,390 --> 00:02:07,693
+so that when you ask it to write code,
+
+45
+00:02:07,693 --> 00:02:10,329
+you can have a better understanding of what's going on.
+
+46
+00:02:10,329 --> 00:02:13,132
+Here we can see the sources in the
+
+47
+00:02:13,132 --> 00:02:16,301
+code base that are actually splitting text into chunks,
+
+48
+00:02:16,301 --> 00:02:19,905
+that are adding lesson context
+and that are storing course metadata.
+
+49
+00:02:19,905 --> 00:02:23,008
+This ability to quickly get up to speed with a code base,
+
+50
+00:02:23,008 --> 00:02:25,377
+especially when you might not be
+
+51
+00:02:25,377 --> 00:02:28,113
+familiar with the underlying technology or language,
+
+52
+00:02:28,113 --> 00:02:30,883
+is exceptionally valuable. Instead of
+
+53
+00:02:30,883 --> 00:02:34,686
+navigating to each of these folders
+and figuring out what's going on,
+
+54
+00:02:35,521 --> 00:02:39,625
+we can ask more specific questions and even get diagrams
+
+55
+00:02:39,625 --> 00:02:42,127
+and visualizations made for us.
+
+56
+00:02:42,361 --> 00:02:43,962
+So the first thing I'll ask Claude
+
+57
+00:02:44,263 --> 00:02:47,466
+is to trace the process of handling a user's query
+
+58
+00:02:48,433 --> 00:02:50,435
+from front end to back end.
+
+59
+00:02:51,770 --> 00:02:54,273
+You can imagine you might have some limited knowledge
+
+60
+00:02:54,506 --> 00:02:56,608
+in one of the parts of the stack or
+
+61
+00:02:56,608 --> 00:02:58,710
+you're not familiar with how this is all happening.
+
+62
+00:02:59,411 --> 00:03:00,946
+So Claude Code is going to
+
+63
+00:03:00,946 --> 00:03:02,714
+give us quite some useful information here.
+
+64
+00:03:03,081 --> 00:03:05,417
+What's useful when you're seeing Claude Code work
+
+65
+00:03:05,751 --> 00:03:08,086
+is its ability to give you a bit of a to-do list,
+
+66
+00:03:08,687 --> 00:03:10,556
+so you can start to understand
+
+67
+00:03:10,556 --> 00:03:12,691
+what's happening. At any point in time,
+
+68
+00:03:13,325 --> 00:03:15,794
+you can press escape and guide Claude Code
+
+69
+00:03:16,061 --> 00:03:17,596
+to follow a different set of to-dos,
+
+70
+00:03:18,530 --> 00:03:21,066
+but in this case, I feel pretty good about what it's doing.
+
+71
+00:03:21,300 --> 00:03:25,204
+It's going to start tracing from the frontend,
+start following API endpoints,
+
+72
+00:03:25,704 --> 00:03:28,774
+analyze our Retrieval Augmented Generation system,
+
+73
+00:03:29,474 --> 00:03:32,277
+and then figure out how to actually generate the response.
+
+74
+00:03:32,878 --> 00:03:36,982
+It's reading the appropriate files
+that are handling these particular tasks
+
+75
+00:03:37,349 --> 00:03:40,052
+and finishing up its list to give us a powerful summary.
+
+76
+00:03:40,385 --> 00:03:41,920
+As we're in this environment,
+
+77
+00:03:42,354 --> 00:03:44,990
+we can stay within VS Code or open
+
+78
+00:03:44,990 --> 00:03:47,926
+up Claude Code in its own dedicated terminal instance.
+
+79
+00:03:48,360 --> 00:03:51,363
+That's completely up to you as you're working in this application.
+
+80
+00:03:51,663 --> 00:03:53,732
+Once it's done, we can see a
+
+81
+00:03:53,732 --> 00:03:55,801
+very detailed path for what's happening here.
+
+82
+00:03:56,401 --> 00:03:58,937
+Not only can I read each of these step-by-step,
+
+83
+00:03:59,171 --> 00:04:01,740
+I can even ask Claude to write this to a file,
+
+84
+00:04:01,974 --> 00:04:03,742
+but I'm seeing in quite a bit
+
+85
+00:04:03,742 --> 00:04:05,811
+of detail what's happening on the front end
+
+86
+00:04:05,911 --> 00:04:08,847
+with some JavaScript, what happens once that reaches my back end,
+
+87
+00:04:08,981 --> 00:04:12,217
+what the Retrieval Augmented Generation system is doing,
+
+88
+00:04:12,484 --> 00:04:14,720
+how I'm generating a response. Finally,
+
+89
+00:04:15,187 --> 00:04:17,422
+how I'm searching through my vector database,
+
+90
+00:04:17,789 --> 00:04:21,159
+how I'm filtering what's necessary, getting a response back,
+
+91
+00:04:21,460 --> 00:04:23,662
+and then finally, sending that to the user.
+
+92
+00:04:24,129 --> 00:04:26,098
+There's a lot that's going on in this application.
+
+93
+00:04:26,398 --> 00:04:27,899
+And I can use Claude to
+
+94
+00:04:27,899 --> 00:04:29,668
+dive deeper into any of those pieces.
+
+95
+00:04:30,035 --> 00:04:32,638
+But let's just say I learn best from visualizations.
+
+96
+00:04:33,171 --> 00:04:35,173
+So let's ask Claude to draw a diagram
+
+97
+00:04:35,707 --> 00:04:37,409
+that illustrates this flow.
+
+98
+00:04:38,043 --> 00:04:39,911
+We can ask Claude to draw diagrams
+
+99
+00:04:40,345 --> 00:04:43,749
+for web visualizations. We can ask for ASCII art.
+
+100
+00:04:44,016 --> 00:04:45,917
+But let's see what Claude comes up with
+
+101
+00:04:45,917 --> 00:04:49,655
+with its own intelligence
+and knowledge of how the application works.
+
+102
+00:04:50,155 --> 00:04:51,823
+So let's see what Claude code has come up with.
+
+103
+00:04:52,090 --> 00:04:53,759
+We've got a really nice diagram here
+
+104
+00:04:54,293 --> 00:04:55,927
+showing us the step-by-step process.
+
+105
+00:04:56,662 --> 00:04:58,630
+So it can't create these visual diagrams.
+
+106
+00:04:59,131 --> 00:05:02,034
+We could always ask it to use some something like D3.js
+
+107
+00:05:02,034 --> 00:05:05,971
+or recharts if we want something like a web application.
+
+108
+00:05:06,571 --> 00:05:08,974
+But we can see right here, we've got a really nice diagram.
+
+109
+00:05:09,141 --> 00:05:12,344
+From the front end, making a request to the back end,
+
+110
+00:05:12,511 --> 00:05:14,513
+calling the necessary functions,
+
+111
+00:05:14,913 --> 00:05:18,817
+generating the response necessary if there's any history involved,
+
+112
+00:05:19,017 --> 00:05:22,020
+talking directly to the large language model
+
+113
+00:05:22,321 --> 00:05:24,690
+with our system prompts and our tools and a query,
+
+114
+00:05:24,890 --> 00:05:26,692
+figuring out where to go next,
+
+115
+00:05:26,692 --> 00:05:30,929
+searching through our vector database
+using Chroma DB, getting back results
+
+116
+00:05:30,929 --> 00:05:35,367
+formatting that, sending it to the model
+to produce a final response.
+
+117
+00:05:35,534 --> 00:05:37,836
+There's quite a bit of detail that goes into this.
+
+118
+00:05:38,036 --> 00:05:41,740
+And if we want, we can even augment Claude with additional tools
+
+119
+00:05:42,174 --> 00:05:44,609
+for generating the visualizations that we want.
+
+120
+00:05:45,010 --> 00:05:49,047
+But out of the box, just getting
+this information quickly and efficiently
+
+121
+00:05:49,314 --> 00:05:51,983
+is going to help us get up to speed with this
+
+122
+00:05:51,983 --> 00:05:54,653
+codebase in a fraction of time that we used to spend.
+
+123
+00:05:55,187 --> 00:05:57,122
+So with that in mind, let's ask a
+
+124
+00:05:57,122 --> 00:05:59,391
+very simple question, how do I run
+
+125
+00:05:59,391 --> 00:06:01,993
+this application? You might be in a situation
+
+126
+00:06:01,993 --> 00:06:04,896
+where there's a new technology here, a new idea.
+
+127
+00:06:04,896 --> 00:06:06,498
+Very simply, it's nice to just
+
+128
+00:06:06,498 --> 00:06:08,400
+know how to get up and running.
+
+129
+00:06:08,700 --> 00:06:10,702
+I can see here, my API documentation,
+
+130
+00:06:10,702 --> 00:06:14,139
+my web interface, and if there are
+any environment variables I need,
+
+131
+00:06:14,539 --> 00:06:17,275
+I'm good to go. Now that you've gotten an idea
+
+132
+00:06:17,275 --> 00:06:19,044
+of how to just start talking to Claude Code.
+
+133
+00:06:19,177 --> 00:06:21,646
+Let's talk a little bit about some of the more powerful features
+
+134
+00:06:21,646 --> 00:06:23,215
+with Claude Code.
+
+135
+00:06:23,215 --> 00:06:25,917
+When you start working with an application in Claude Code,
+
+136
+00:06:26,184 --> 00:06:27,452
+one of the first things we
+
+137
+00:06:27,452 --> 00:06:28,920
+recommend you do is run a command
+
+138
+00:06:29,254 --> 00:06:30,756
+called /init.
+
+139
+00:06:30,756 --> 00:06:33,425
+You can see here in Claude Code, when I add this slash,
+
+140
+00:06:34,025 --> 00:06:37,562
+we have a list of many built-in commands that I can use.
+
+141
+00:06:37,662 --> 00:06:39,431
+/init allows me to initialize
+
+142
+00:06:39,431 --> 00:06:43,635
+a CLAUDE.md file with the codebase documentation.
+
+143
+00:06:43,735 --> 00:06:46,938
+The CLAUDE.md file is mission critical
+
+144
+00:06:46,938 --> 00:06:49,741
+for introducing memory for Claude Code,
+
+145
+00:06:49,741 --> 00:06:52,644
+so that it knows how best to work in your codebase.
+
+146
+00:06:53,044 --> 00:06:55,013
+The CLAUDE.md file is very useful
+
+147
+00:06:55,013 --> 00:06:58,016
+for specifying how you want things to be run.
+
+148
+00:06:58,016 --> 00:07:00,552
+This could be your tests, this could be your linting,
+
+149
+00:07:00,952 --> 00:07:04,523
+and any long-term memory that you want Claude to have
+
+150
+00:07:04,523 --> 00:07:08,226
+each time you're working with Claude Code
+for this particular project.
+
+151
+00:07:08,360 --> 00:07:10,629
+Instead of making this from scratch, /init
+
+152
+00:07:10,629 --> 00:07:12,564
+is going to analyze the codebase
+
+153
+00:07:12,564 --> 00:07:15,934
+to figure out at a high level what it should know about
+
+154
+00:07:15,934 --> 00:07:18,537
+each time you're working with this application.
+
+155
+00:07:19,237 --> 00:07:22,574
+There are three different CLAUDE.md files that you can make,
+
+156
+00:07:22,574 --> 00:07:24,843
+like the one generated with /init
+
+157
+00:07:24,843 --> 00:07:26,778
+all the way here on the left.
+
+158
+00:07:27,045 --> 00:07:30,715
+This CLAUDE.md file lives in your application. You can
+
+159
+00:07:30,715 --> 00:07:33,385
+have many of them in nested sub folders.
+
+160
+00:07:33,385 --> 00:07:35,320
+But this is shared with other
+
+161
+00:07:35,320 --> 00:07:37,556
+engineers and committed to your version control.
+
+162
+00:07:38,056 --> 00:07:40,792
+Another option is if you have personal instructions
+
+163
+00:07:40,792 --> 00:07:43,495
+and customizations, think specific for your editing environment
+
+164
+00:07:43,495 --> 00:07:48,495
+and terminal environment,
+you can put that in a CLAUDE.local.md file.
+
+165
+00:07:50,969 --> 00:07:53,538
+This is git ignored and not shared with other engineers.
+
+166
+00:07:54,105 --> 00:07:56,308
+Finally, in your home directory, in the
+
+167
+00:07:56,308 --> 00:07:58,510
+.claude folder, you can add a CLAUDE.md
+
+168
+00:07:58,510 --> 00:08:00,812
+and you can think of this like a
+
+169
+00:08:00,879 --> 00:08:04,416
+global claude.md for all projects on your machine.
+
+170
+00:08:04,416 --> 00:08:08,086
+This is helpful if you want Claude to follow instructions across
+
+171
+00:08:08,086 --> 00:08:11,756
+a wide range of projects that you build with Claude Code.
+
+172
+00:08:18,330 --> 00:08:21,500
+We can go ahead and allow Claude Code to find different
+
+173
+00:08:21,500 --> 00:08:24,970
+files so that it knows how best to create this CLAUDE.md file.
+
+174
+00:08:25,270 --> 00:08:27,973
+This CLAUDE.md file is meant to be
+
+175
+00:08:27,973 --> 00:08:30,675
+added to your current git project and
+
+176
+00:08:30,675 --> 00:08:32,244
+shared with other team members.
+
+177
+00:08:32,878 --> 00:08:35,347
+As more individuals work on the codebase,
+
+178
+00:08:35,347 --> 00:08:37,682
+they can add to this CLAUDE.md file,
+
+179
+00:08:37,682 --> 00:08:40,051
+and you can even nest CLAUDE.md files
+
+180
+00:08:40,519 --> 00:08:42,687
+in subdirectories if you need
+
+181
+00:08:42,687 --> 00:08:45,590
+more specific instructions for things like the backend
+
+182
+00:08:45,824 --> 00:08:47,826
+or frontend or our docs that we have here.
+
+183
+00:08:47,993 --> 00:08:50,228
+What's really nice about using a tool
+
+184
+00:08:50,228 --> 00:08:52,464
+like Claude Code with Visual Studio Code,
+
+185
+00:08:52,831 --> 00:08:54,499
+is that as I see changes to files,
+
+186
+00:08:55,000 --> 00:08:56,902
+I can see those visually in my editor.
+
+187
+00:08:57,202 --> 00:09:00,639
+And anytime that I am using a tool in Claude Code,
+
+188
+00:09:01,006 --> 00:09:02,707
+it's going to ask me for permissions.
+
+189
+00:09:03,108 --> 00:09:05,810
+This mission critical human in the loop is really important
+
+190
+00:09:06,244 --> 00:09:07,846
+when you get up and running,
+
+191
+00:09:08,079 --> 00:09:11,383
+and if you don't need Claude to ask you every single time,
+
+192
+00:09:11,883 --> 00:09:13,685
+can always use this second option. We'll
+
+193
+00:09:13,685 --> 00:09:15,520
+go ahead and auto accept those edits
+
+194
+00:09:15,987 --> 00:09:19,758
+and we'll see that a CLAUDE.md file has been created for us.
+
+195
+00:09:19,991 --> 00:09:22,127
+To give you a quick walk through,
+
+196
+00:09:22,127 --> 00:09:24,229
+we can see it's given us a
+
+197
+00:09:24,229 --> 00:09:27,198
+project overview, key technologies, an architectural overview,
+
+198
+00:09:27,632 --> 00:09:30,201
+a nice little diagram here, some core components.
+
+199
+00:09:30,802 --> 00:09:33,305
+and much more. If we want things to change
+
+200
+00:09:33,305 --> 00:09:36,741
+to this particular CLAUDE.md, we can easily do so.
+
+201
+00:09:36,942 --> 00:09:38,910
+As it continues searching the codebase,
+
+202
+00:09:38,910 --> 00:09:41,846
+it makes additional edits here to my CLAUDE.md
+
+203
+00:09:41,846 --> 00:09:44,182
+and gives me a summary of what's been done.
+
+204
+00:09:44,416 --> 00:09:47,552
+When I'm using a tool like Claude Code in VS Code,
+
+205
+00:09:47,552 --> 00:09:49,254
+I have the ability to specify which
+
+206
+00:09:49,254 --> 00:09:50,956
+file I'm in and even get information
+
+207
+00:09:50,956 --> 00:09:52,991
+about particular lines.
+
+208
+00:09:53,191 --> 00:09:56,494
+To set this up, I'm going to use the /ide command.
+
+209
+00:09:56,695 --> 00:09:58,029
+and I can see right here
+
+210
+00:09:58,029 --> 00:09:59,598
+that I'm connected with Visual Studio Code.
+
+211
+00:09:59,764 --> 00:10:02,934
+Now that I'm in Visual Studio Code, we can see right here
+
+212
+00:10:02,934 --> 00:10:05,337
+that the second that I visit a file,
+
+213
+00:10:05,337 --> 00:10:07,472
+it's tagged right here for what's going on.
+
+214
+00:10:07,806 --> 00:10:09,841
+This gives Claude Code the right context
+
+215
+00:10:09,841 --> 00:10:12,344
+for which file I'm in and if there are questions
+
+216
+00:10:12,344 --> 00:10:14,179
+I have about that file, it makes it easier
+
+217
+00:10:14,179 --> 00:10:15,947
+for Claude Code to identify that.
+
+218
+00:10:16,414 --> 00:10:18,683
+If I ever want to make any changes
+
+219
+00:10:18,683 --> 00:10:21,820
+to my CLAUDE.md file, I can manually write that if I'd like.
+
+220
+00:10:21,820 --> 00:10:23,488
+Or I can use a handy command
+
+221
+00:10:23,488 --> 00:10:25,423
+to go ahead and use this pound key
+
+222
+00:10:25,423 --> 00:10:27,392
+and directly add to memory.
+
+223
+00:10:27,392 --> 00:10:30,395
+So I'm just going to say here, always use UV.
+
+224
+00:10:30,595 --> 00:10:33,398
+to run the server, do not use pip directly.
+
+225
+00:10:33,698 --> 00:10:36,401
+This is a package manager in the Python ecosystem
+
+226
+00:10:36,501 --> 00:10:38,603
+and I want to make sure that Claude doesn't get confused.
+
+227
+00:10:38,903 --> 00:10:41,773
+When I use this shortcut, we can see there are different places
+
+228
+00:10:42,173 --> 00:10:43,842
+where this memory can be saved.
+
+229
+00:10:43,842 --> 00:10:45,777
+We mentioned there is the Project memory
+
+230
+00:10:46,077 --> 00:10:49,280
+that is included in git for everyone on your team to use.
+
+231
+00:10:49,581 --> 00:10:52,183
+We have local memory that is gitignored
+
+232
+00:10:52,384 --> 00:10:54,586
+but just useful for you as the developer.
+
+233
+00:10:54,786 --> 00:10:57,188
+and then User memory that is applicable
+
+234
+00:10:57,489 --> 00:11:00,558
+to all projects you use with Claude Code.
+
+235
+00:11:00,558 --> 00:11:03,528
+For this one, I'll just go ahead and update the project memory.
+
+236
+00:11:03,795 --> 00:11:05,664
+I can see here, I've made that change.
+
+237
+00:11:05,930 --> 00:11:08,533
+And if I look in my CLAUDE.md, I'll see right here,
+
+238
+00:11:08,833 --> 00:11:11,002
+I have some mentions to using UV
+
+239
+00:11:11,002 --> 00:11:13,471
+to make sure that I'm doing that correctly.
+
+240
+00:11:13,772 --> 00:11:15,674
+If I want to be more specific, I can also say,
+
+241
+00:11:16,207 --> 00:11:20,545
+make sure to use UV to manage all dependencies.
+
+242
+00:11:20,779 --> 00:11:22,614
+I'll add this to my CLAUDE.md and
+
+243
+00:11:22,614 --> 00:11:24,716
+we'll see right here that it's been added.
+
+244
+00:11:24,749 --> 00:11:26,718
+If I take a quick look at this particular file,
+
+245
+00:11:27,052 --> 00:11:30,155
+we can see any mention of dependencies now includes UV.
+
+246
+00:11:40,432 --> 00:11:42,367
+We spoke a little bit about some of the commands
+
+247
+00:11:42,767 --> 00:11:45,403
+that are built into Claude Code like /emit.
+
+248
+00:11:46,104 --> 00:11:47,338
+There are a couple other useful
+
+249
+00:11:47,338 --> 00:11:48,807
+ones that I want to showcase here.
+
+250
+00:11:49,374 --> 00:11:51,042
+And in fact, we're going to see later on
+
+251
+00:11:51,042 --> 00:11:52,744
+in this course, we can even make our own.
+
+252
+00:11:53,178 --> 00:11:54,245
+One of the first ones I
+
+253
+00:11:54,245 --> 00:11:55,547
+want to walk you through is /help.
+
+254
+00:11:55,747 --> 00:11:58,416
+This shows me right off the bat a quick description
+
+255
+00:11:59,150 --> 00:12:01,519
+of all the commands. and a quick summary.
+
+256
+00:12:01,820 --> 00:12:05,023
+This is useful as you're getting up to speed with Claude code.
+
+257
+00:12:05,490 --> 00:12:08,560
+The next one I want to showcase is a command called /clear.
+
+258
+00:12:08,893 --> 00:12:11,029
+What this allows you to do is
+
+259
+00:12:11,029 --> 00:12:13,465
+clear the conversation history and start from scratch.
+
+260
+00:12:14,032 --> 00:12:17,535
+This is very helpful as you shift gears and build new features.
+
+261
+00:12:18,036 --> 00:12:21,539
+This allows you to clear the context window and start fresh.
+
+262
+00:12:21,806 --> 00:12:24,476
+If you want to continue the conversation,
+
+263
+00:12:24,909 --> 00:12:26,978
+have a smaller context window, but still
+
+264
+00:12:26,978 --> 00:12:29,047
+have a summary of what's been done,
+
+265
+00:12:29,347 --> 00:12:31,616
+we also have this command /compact
+
+266
+00:12:31,616 --> 00:12:34,219
+that allows you to clear the history, but keep a summary
+
+267
+00:12:34,219 --> 00:12:37,322
+so that you can build off with Claude having an idea
+
+268
+00:12:37,322 --> 00:12:39,023
+of what was done before.
+
+269
+00:12:39,023 --> 00:12:42,827
+One more useful command is the escape key that allows you
+
+270
+00:12:42,827 --> 00:12:44,729
+to get out of whatever command you're in.
+
+271
+00:12:44,729 --> 00:12:48,399
+So if I'm going and trying to do something like /compact
+
+272
+00:12:48,399 --> 00:12:51,102
+and I want to stop that process, I can always press escape.
+
+273
+00:12:51,102 --> 00:12:53,404
+If I start a process with Claude Code
+
+274
+00:12:53,404 --> 00:12:56,107
+to explain what is in the codebase.
+
+275
+00:12:56,107 --> 00:12:58,710
+If I want to stop that process, escape
+
+276
+00:12:58,710 --> 00:13:01,312
+will allow me to interrupt and continue, onwards.
+
+277
+00:13:01,312 --> 00:13:03,515
+So don't feel like you have to wait for
+
+278
+00:13:03,515 --> 00:13:05,717
+Claude Code if you're not getting what you need.
+
+279
+00:13:05,984 --> 00:13:09,420
+In the next lesson, we'll start using
+Claude Code to build features,
+
+280
+00:13:09,687 --> 00:13:12,190
+add to files, modify changes, and make sure
+
+281
+00:13:12,190 --> 00:13:14,659
+we're doing the right thing along the way.
+
+282
+00:13:15,059 --> 00:13:17,262
+Before we hop off, one last useful piece with
+
+283
+00:13:17,262 --> 00:13:19,497
+Claude Code is its ability to work with Git.
+
+284
+00:13:19,731 --> 00:13:22,267
+So I've made some small changes to this application,
+
+285
+00:13:22,267 --> 00:13:24,769
+and I want to add and commit these changes.
+
+286
+00:13:25,069 --> 00:13:27,338
+Instead of me manually have to write
+
+287
+00:13:27,338 --> 00:13:29,941
+the Git commands, write a descriptive commit message,
+
+288
+00:13:30,608 --> 00:13:33,244
+going to actually have Claude Code do that work for us.
+
+289
+00:13:33,378 --> 00:13:35,947
+And what's really nice is Claude Code's ability to add
+
+290
+00:13:36,247 --> 00:13:38,116
+and commit the necessary commands.
+
+291
+00:13:38,383 --> 00:13:40,418
+I'll go ahead and add this particular file,
+
+292
+00:13:40,919 --> 00:13:43,154
+not only commit, but you can see here,
+
+293
+00:13:43,154 --> 00:13:45,356
+I've got this really nice descriptive commit message.
+
+294
+00:13:45,790 --> 00:13:48,560
+That's incredibly useful as we start asking Claude Code
+
+295
+00:13:48,726 --> 00:13:50,795
+about historical changes with git.
+
+296
+00:13:50,795 --> 00:13:52,764
+and when we push this to GitHub and
+
+297
+00:13:52,764 --> 00:13:54,199
+other people are reading the changes
+
+298
+00:13:54,199 --> 00:13:55,900
+we made. So we'll add and commit
+
+299
+00:13:55,900 --> 00:13:58,102
+and the next lesson, we'll use Claude Code
+
+300
+00:13:58,102 --> 00:14:00,271
+to start writing lots of things for us.
+

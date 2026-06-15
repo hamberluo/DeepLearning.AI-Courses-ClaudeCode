@@ -1,0 +1,56 @@
+1
+00:00:03,202 --> 00:00:05,104
+Congratulations on making it this far.
+
+2
+00:00:05,104 --> 00:00:07,239
+You've learned how to use Claude Code
+
+3
+00:00:07,239 --> 00:00:11,410
+to explore, test, refactor, and debug code bases.
+
+4
+00:00:11,410 --> 00:00:13,579
+You can make the best out of Claude Code
+
+5
+00:00:13,579 --> 00:00:15,414
+when you give it clear instructions,
+
+6
+00:00:15,414 --> 00:00:17,016
+clarify the context,
+
+7
+00:00:17,016 --> 00:00:19,485
+and point it to the relevant files in your codebase.
+
+8
+00:00:19,485 --> 00:00:21,987
+Make sure to add your codebase rules to CLAUDE.md
+
+9
+00:00:21,987 --> 00:00:23,956
+and any information that you'd like
+
+10
+00:00:23,956 --> 00:00:26,291
+Claude Code to remember about your project.
+
+11
+00:00:26,992 --> 00:00:29,395
+Consider extending Claude Code capabilities
+
+12
+00:00:29,395 --> 00:00:32,297
+and connecting it to MCP servers like Playwright and Figma.
+
+13
+00:00:32,498 --> 00:00:34,099
+Thank you for joining me on this journey.
+
+14
+00:00:34,299 --> 00:00:37,002
+and I can't wait to see what you'll build with Claude Code.
+

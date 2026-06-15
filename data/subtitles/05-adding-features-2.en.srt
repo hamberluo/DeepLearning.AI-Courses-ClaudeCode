@@ -1,0 +1,507 @@
+1
+00:00:00,000 --> 00:00:00,566
+to figure out how to build the necessary
+
+2
+00:00:00,566 --> 00:00:02,533
+content. So let's go and ask Claude Code
+
+3
+00:00:03,100 --> 00:00:05,500
+using the Playwright MCP server
+
+4
+00:00:05,766 --> 00:00:07,733
+visit the page that we're at
+
+5
+00:00:08,100 --> 00:00:10,400
+and view the new chat button.
+
+6
+00:00:11,166 --> 00:00:14,666
+I want that button to look the same as the other
+
+7
+00:00:14,966 --> 00:00:19,600
+links below for Courses and Try Asking.
+
+8
+00:00:20,166 --> 00:00:22,533
+Make sure this is left aligned
+
+9
+00:00:23,100 --> 00:00:25,933
+and that the border is removed.
+
+10
+00:00:26,866 --> 00:00:28,433
+Before it starts taking this action,
+
+11
+00:00:28,866 --> 00:00:31,966
+it's going to ask me for approval for these particular tools.
+
+12
+00:00:32,300 --> 00:00:33,833
+We'll see that it will visit
+
+13
+00:00:33,833 --> 00:00:36,766
+that page, take a screenshot and do do what's necessary.
+
+14
+00:00:37,300 --> 00:00:39,566
+Let's follow that and not ask for
+
+15
+00:00:39,566 --> 00:00:42,100
+permission each time to use this particular tool.
+
+16
+00:00:42,366 --> 00:00:45,566
+We can see here that the browser has opened a
+
+17
+00:00:45,566 --> 00:00:48,766
+new tab programmatically to our page to take a screenshot.
+
+18
+00:00:49,200 --> 00:00:51,133
+We'll ask Claude Code to take that screenshot
+
+19
+00:00:51,900 --> 00:00:53,766
+and analyze what it sees.
+
+20
+00:00:54,033 --> 00:00:58,200
+Here it can see the exact issue that's happening and instead of
+
+21
+00:00:58,200 --> 00:01:00,300
+us manually having to take the
+
+22
+00:01:00,300 --> 00:01:02,733
+screenshots necessary, it can programmatically fix itself.
+
+23
+00:01:02,933 --> 00:01:06,100
+We could have a more specific prompt as well, that keeps asking
+
+24
+00:01:06,100 --> 00:01:08,466
+Claude Code to make those changes necessary.
+
+25
+00:01:08,466 --> 00:01:11,433
+Since I don't have auto accept on, I can see the change
+
+26
+00:01:11,433 --> 00:01:13,100
+that's being made in VS Code.
+
+27
+00:01:13,133 --> 00:01:15,100
+And right out of the box, I don't
+
+28
+00:01:15,100 --> 00:01:16,700
+see a border and background with this
+
+29
+00:01:16,700 --> 00:01:18,300
+new change. That looks good to me.
+
+30
+00:01:18,733 --> 00:01:21,800
+Let's make those changes and continue making other changes.
+
+31
+00:01:21,800 --> 00:01:24,133
+I can see left align looking good.
+
+32
+00:01:24,633 --> 00:01:26,966
+and any other changes that need to be made here.
+
+33
+00:01:26,966 --> 00:01:29,100
+It's going to take another screenshot to
+
+34
+00:01:29,100 --> 00:01:31,566
+verify that the changes it's made look correct.
+
+35
+00:01:31,833 --> 00:01:34,433
+that it has the right icon prefixes used.
+
+36
+00:01:34,633 --> 00:01:36,233
+match other sections. With that in
+
+37
+00:01:36,233 --> 00:01:38,066
+mind, let's go see how he did.
+
+38
+00:01:38,400 --> 00:01:40,833
+I'm going to refresh the page. and it's looking good.
+
+39
+00:01:41,200 --> 00:01:43,800
+It's got an extra plus here. So why don't we go ahead
+
+40
+00:01:43,800 --> 00:01:45,166
+and ask it to take that
+
+41
+00:01:45,166 --> 00:01:46,766
+out. But it's left aligned and it's
+
+42
+00:01:46,800 --> 00:01:48,600
+using the icon that we like before.
+
+43
+00:01:49,066 --> 00:01:51,166
+So let's go ahead and fix this up and say,
+
+44
+00:01:52,200 --> 00:01:54,900
+there are now two plus icons, remove the
+
+45
+00:01:54,900 --> 00:01:57,600
+one closer to the text "+ New Chat"
+
+46
+00:01:57,866 --> 00:02:00,833
+We can see here there's already a plus in the HTML content,
+
+47
+00:02:00,933 --> 00:02:02,466
+so we'll remove that and let's see
+
+48
+00:02:02,466 --> 00:02:04,000
+what's done here. So instead of adding
+
+49
+00:02:04,000 --> 00:02:06,700
+that extra plus, we can see here what's being done.
+
+50
+00:02:06,800 --> 00:02:08,600
+If we need another snapshot, we
+
+51
+00:02:08,600 --> 00:02:10,700
+can visit and take a snapshot necessary.
+
+52
+00:02:11,300 --> 00:02:13,300
+As we can see here, Claude Code
+
+53
+00:02:13,300 --> 00:02:16,800
+saw there was not an open tab, so it fixed itself,
+
+54
+00:02:16,800 --> 00:02:19,766
+opened it up again and took the necessary screenshot.
+
+55
+00:02:20,300 --> 00:02:22,800
+Let's see what that looks like now. Much better.
+
+56
+00:02:23,100 --> 00:02:26,800
+As you can imagine, building complex interfaces
+
+57
+00:02:26,800 --> 00:02:29,800
+using tools like MCP playwright
+
+58
+00:02:29,800 --> 00:02:33,500
+makes building, designing and testing a breeze.
+We've made some really
+
+59
+00:02:33,566 --> 00:02:36,366
+nice front end changes. Let's now go and visit the back end.
+
+60
+00:02:36,833 --> 00:02:39,266
+Like we did before, we're going to start
+
+61
+00:02:39,266 --> 00:02:41,166
+fresh and instead of building off of this
+
+62
+00:02:41,166 --> 00:02:43,266
+conversation, we're going to start with a new one.
+
+63
+00:02:43,833 --> 00:02:46,900
+So let's clear the conversation history and start again.
+
+64
+00:02:47,233 --> 00:02:51,233
+This time, we want to build some features on the back end.
+
+65
+00:02:51,400 --> 00:02:52,866
+So let's put in a prompt, talk
+
+66
+00:02:52,866 --> 00:02:54,333
+about what's going to be done here.
+
+67
+00:02:54,733 --> 00:02:56,233
+I need to add another tool
+
+68
+00:02:56,600 --> 00:02:59,900
+that allows me to visit a particular course
+
+69
+00:03:00,100 --> 00:03:02,633
+and for each of those courses, see the
+
+70
+00:03:02,700 --> 00:03:07,100
+lesson number and the lesson title and description
+about that as well.
+
+71
+00:03:07,566 --> 00:03:09,033
+Right now, the data that I get
+
+72
+00:03:09,033 --> 00:03:10,700
+when I take a look at a course
+
+73
+00:03:11,533 --> 00:03:13,966
+is relatively high level. Let's see what I mean.
+
+74
+00:03:14,333 --> 00:03:16,733
+What we're going to ask Claude Code to do
+
+75
+00:03:16,733 --> 00:03:19,433
+here is to make a change to our search_tools.py file.
+
+76
+00:03:20,366 --> 00:03:21,866
+Let's take a look at that. And
+
+77
+00:03:21,866 --> 00:03:23,566
+in this file, we can see right now
+
+78
+00:03:23,666 --> 00:03:26,966
+that we just have one tool for searching
+
+79
+00:03:27,000 --> 00:03:32,000
+content and getting details about that particular course.
+This second tool
+
+80
+00:03:32,033 --> 00:03:36,133
+is going to allow us to get more descriptive information
+
+81
+00:03:36,133 --> 00:03:38,433
+for each of the lessons in these courses.
+
+82
+00:03:38,733 --> 00:03:41,933
+So let's see what Claude can do. As we've done previously,
+
+83
+00:03:42,133 --> 00:03:44,033
+let's make a plan and make
+
+84
+00:03:44,033 --> 00:03:46,233
+sure we're first okay with that plan
+
+85
+00:03:46,233 --> 00:03:48,633
+before we start making changes to individual files.
+
+86
+00:03:49,033 --> 00:03:50,933
+Claude Code can see the current
+
+87
+00:03:50,933 --> 00:03:53,133
+architecture, had to implement the outline tool,
+
+88
+00:03:53,333 --> 00:03:55,366
+and since we have that CLAUDE.md
+
+89
+00:03:55,366 --> 00:03:57,733
+previously, it's going to more quickly be able
+
+90
+00:03:57,733 --> 00:04:00,033
+to understand what needs to be done.
+
+91
+00:04:00,233 --> 00:04:02,600
+We can take a look at what needs to be implemented,
+
+92
+00:04:02,633 --> 00:04:04,066
+we can make sure that we're doing
+
+93
+00:04:04,066 --> 00:04:05,500
+the right things in the right files.
+
+94
+00:04:05,933 --> 00:04:08,100
+We can see that once we create this tool,
+
+95
+00:04:08,400 --> 00:04:10,366
+we update the system prompt to make
+
+96
+00:04:10,366 --> 00:04:12,333
+sure that we get that additional data,
+
+97
+00:04:12,766 --> 00:04:15,566
+and then we register that tool in our RAG system.
+
+98
+00:04:15,866 --> 00:04:17,933
+As always, if there's anything we want to
+
+99
+00:04:17,933 --> 00:04:19,966
+change or suggest, we can do that now.
+
+100
+00:04:20,533 --> 00:04:22,433
+But let's see what Claude Code can do for us.
+
+101
+00:04:22,733 --> 00:04:24,266
+If this works as expected,
+
+102
+00:04:24,600 --> 00:04:27,500
+we should be able to ask questions about a
+
+103
+00:04:27,500 --> 00:04:30,366
+course and get much more detail for those particular
+
+104
+00:04:30,700 --> 00:04:32,466
+lessons in the course.
+
+105
+00:04:32,733 --> 00:04:35,000
+We can see here that not only are we
+
+106
+00:04:35,033 --> 00:04:37,566
+modifying the underlying Python code, but also the system prompt
+
+107
+00:04:37,633 --> 00:04:41,733
+and here we're registering that new tool that we've made.
+
+108
+00:04:41,866 --> 00:04:43,233
+Once we finished our to-do list,
+
+109
+00:04:43,233 --> 00:04:44,833
+we can head back to the browser
+
+110
+00:04:45,400 --> 00:04:47,000
+and see what things look like
+
+111
+00:04:47,000 --> 00:04:48,866
+and if this has been implemented correctly.
+
+112
+00:04:49,266 --> 00:04:51,366
+We'll see a nice summary of what's been made
+
+113
+00:04:51,533 --> 00:04:54,333
+and we can always change things at any point in time.
+
+114
+00:04:54,500 --> 00:04:57,400
+Back in the browser, let's go ahead and try asking
+
+115
+00:04:57,866 --> 00:04:59,566
+for some information about a course.
+
+116
+00:04:59,733 --> 00:05:01,233
+If this works as expected.
+
+117
+00:05:01,666 --> 00:05:04,000
+We should be able to get more detailed information
+
+118
+00:05:04,366 --> 00:05:06,800
+including a link for that particular course.
+
+119
+00:05:07,300 --> 00:05:09,466
+Here, we can see the names of the lessons
+
+120
+00:05:09,766 --> 00:05:12,966
+and if we would like, we can even build additional functionality
+
+121
+00:05:13,333 --> 00:05:14,933
+to get sources for each one of those.
+
+122
+00:05:15,700 --> 00:05:18,133
+In the next lesson, we'll talk about what happens
+
+123
+00:05:18,133 --> 00:05:20,166
+when things go wrong and how we can use
+
+124
+00:05:20,166 --> 00:05:22,866
+Claude Code to debug, to write tests,
+
+125
+00:05:22,866 --> 00:05:25,766
+and make sure that we feel confident in
+
+126
+00:05:25,766 --> 00:05:28,633
+the software that we're writing alongside Claude Code.
+

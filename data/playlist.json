@@ -1,0 +1,21 @@
+{
+  "course": "Claude Code: A Highly Agentic Coding Assistant",
+  "publisher": "DeepLearning.AI x Anthropic",
+  "instructor": "Elie Schoppik",
+  "youtube_playlist": "https://www.youtube.com/playlist?list=PLM3BowDjMUhai9fgX3JK_ZiMt8BotHZaH",
+  "youtube_channel": "Ted Tyler (reupload)",
+  "materials_repo": "https://github.com/https-deeplearning-ai/sc-claude-code-files",
+  "lessons": [
+    { "order": 1, "slug": "introduction", "title_en": "Introduction", "title_zh": "课程介绍", "youtube_id": "_tHVJuIbc-s", "duration": "04:26", "source": "youtube", "subtitle": "subtitles/01-introduction.en.srt" },
+    { "order": 2, "slug": "what-is-claude-code", "title_en": "What is Claude Code?", "title_zh": "什么是 Claude Code？", "youtube_id": "JjQBijjVnMo", "duration": "08:15", "source": "youtube", "subtitle": "subtitles/02-what-is-claude-code.en.srt" },
+    { "order": 3, "slug": "setup-and-codebase-understanding", "title_en": "Setup & Codebase Understanding", "title_zh": "环境搭建与代码库理解", "youtube_id": "GMcGddfI8ls", "duration": "14:00", "source": "youtube", "subtitle": "subtitles/03-setup-and-codebase-understanding.en.srt" },
+    { "order": 4, "slug": "adding-features-1", "title_en": "Adding Features (1)", "title_zh": "添加功能（上）", "youtube_id": "srUCKLoe20E", "duration": "12:09", "source": "youtube", "subtitle": "subtitles/04-adding-features-1.en.srt" },
+    { "order": 5, "slug": "adding-features-2", "title_en": "Adding Features (2)", "title_zh": "添加功能（下）", "youtube_id": "HbqK8aPdcB0", "duration": "05:29", "source": "youtube", "subtitle": "subtitles/05-adding-features-2.en.srt" },
+    { "order": 6, "slug": "testing-debugging-refactoring", "title_en": "Testing, Error Debugging and Code Refactoring", "title_zh": "测试、调试与代码重构", "youtube_id": "Ifx7Lb1ehu8", "duration": "12:30", "source": "youtube", "subtitle": "subtitles/06-testing-debugging-refactoring.en.srt" },
+    { "order": 7, "slug": "adding-multiple-features", "title_en": "Adding Multiple Features Simultaneously", "title_zh": "同时并行开发多个功能", "youtube_id": "tn9W_WT779g", "duration": "11:52", "source": "youtube", "subtitle": "subtitles/07-adding-multiple-features.en.srt" },
+    { "order": 8, "slug": "github-integration-and-hooks", "title_en": "Exploring Github Integration & Hooks", "title_zh": "探索 GitHub 集成与 hooks", "youtube_id": "icM60GWLpME", "duration": "12:46", "source": "youtube", "subtitle": "subtitles/08-github-integration-and-hooks.en.srt" },
+    { "order": 9, "slug": "refactoring-jupyter-notebook", "title_en": "Refactoring a Jupyter Notebook & Creating a Dashboard", "title_zh": "重构 Jupyter Notebook 并制作仪表盘", "youtube_id": null, "duration": "12:00", "source": "deeplearning.ai", "source_url": "https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant/lesson/33kzr/refactoring-a-jupyter-notebook-%26-creating-a-dashboard", "subtitle": "subtitles/09-refactoring-jupyter-notebook.en.txt", "note": "YouTube playlist 缺此节，从 DLAI 公开课程页抓取完整文字稿" },
+    { "order": 10, "slug": "creating-web-app-figma", "title_en": "Creating Web App based on a Figma Mockup", "title_zh": "基于 Figma 设计稿创建 Web 应用", "youtube_id": "nn5T9457tLU", "duration": "09:53", "source": "youtube", "subtitle": "subtitles/10-creating-web-app-figma.en.srt" },
+    { "order": 11, "slug": "conclusion", "title_en": "Conclusion", "title_zh": "结语", "youtube_id": "WKr4f7tfyPU", "duration": "00:37", "source": "youtube", "subtitle": "subtitles/11-conclusion.en.srt", "note": "源 playlist 第 11 个 Conclusion 视频字幕错误（与 hooks 节重复），真正结束语来自这段 37s 片段" }
+  ]
+}

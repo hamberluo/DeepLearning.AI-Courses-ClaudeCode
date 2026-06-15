@@ -1,0 +1,69 @@
+# ---- macOS ----
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ---- 编辑器 ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- 环境变量 / 密钥 / 凭证 ----
+.env
+.env.*
+!.env.example
+cookies.txt
+*.cookies
+*.pem
+*.key
+credentials.json
+secrets.json
+service-account*.json
+
+# ---- Python (阶段③ manim) ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# ---- manim / LaTeX 渲染产物 ----
+media/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.aac
+*.aux
+*.synctex.gz
+
+# ---- Node / 前端 (阶段② 网站) ----
+node_modules/
+dist/
+build/
+.cache/
+.next/
+.parcel-cache/
+.turbo/
+.vercel/
+coverage/
+*.log
+*-debug.log
+
+# ---- 官方代码素材(vendored, 不进我们提交历史) ----
+external/
+
+# ---- 临时 / 草稿 / 抓取中间产物 ----
+# 原始字幕(脚本临时输出)；清洗后的成品仍纳入版本管理
+data/subtitles/_raw/
+tmp/
+scratch/
+*.tmp
+*.part
+*.ytdl
